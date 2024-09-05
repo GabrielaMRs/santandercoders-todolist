@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <main>
         <form action=""> 
             Logo<img src="" alt="">
             <input type="text" id="tarefa" placeholder="Nova Tarefa..." required>
             
             <select name="status" id="statusTarefa">
-                <option value="0" selected disabled>Status</option>
-                <option value="1">Feita</option>
-                <option value="2">Tranquila</option>
-                <option value="3">Importante</option>
-                <option value="4">Urgente</option>                
+                <option value="" selected disabled>Status</option>
+                <option value="feita">Feita</option>
+                <option value="tranquila">Tranquila</option>
+                <option value="importante">Importante</option>
+                <option value="urgente">Urgente</option>                
             </select>
             <button type="submit" id="btn-addTarefa">Adicionar Tarefa</button>            
         </form>
         <div>
             <ul id="listaTarefas"></ul>
         </div>
+        <div>
+            <input type="number" id="buscarTarefa" placeholder="Id da tarefa que deseja...">
+            <button id="btn-buscarTarefa">Procurar</button>
+        </div>
     </main>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ function exibirTarefas(){
 
         const btnRemover = document.createElement('button');
         btnRemover.textContent = "Remover";
-        btnRemover.addEventListener('click', () => removerTarefa(tarefa.id));
+        btnRemover.addEventListener('click', () => removerTarefa(tarefa));
         item.appendChild(btnRemover)
 
         listaTarefas.appendChild(item);
@@ -62,10 +62,15 @@ function editarTarefa(id){
 
 }
 
+// Função para remover a Tarefa
 function removerTarefa(id){
+    tarefas.splice(id, 1);
 
+    exibirTarefas();
 }
 
 function obterTarefa(id){
     
 }
+
+exibirTarefas();

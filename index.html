@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do listaTarefas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
     <main>
+        <img src="./assets/images/teletubbies-sol.gif" alt="Sol do Teletubbies" id="teletubbies-sol">
+
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/011/812/088/small/to-do-cute-sticker-text-with-twinkle-star-png.png" alt="Logo da ToDo-List">
+
         <form action=""> 
-            Logo<img src="" alt="">
             <input type="text" id="tarefa" placeholder="Nova Tarefa..." required>
             
             <select name="status" id="statusTarefa">
@@ -20,17 +22,20 @@
                 <option value="importante">Importante</option>
                 <option value="urgente">Urgente</option>                
             </select>
+
             <button type="submit" id="btn-addTarefa">Adicionar Tarefa</button>            
         </form>
+
         <div>
             <ul id="listaTarefas"></ul>
         </div>
+        
         <div>
             <input type="number" id="buscarTarefa" placeholder="Id da tarefa que deseja...">
             <button id="btn-buscarTarefa">Procurar</button>
         </div>
     </main>
 
-<script src="script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+body {
+    /* background-image: url('../assets/images/background.png'); */
+    background-image: url('../assets/images/background-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.status-feita, .status-tranquila, .status-importante, .status-urgente {
+    width: 50px; 
+    height: 50px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;     
+}
+
+.status-feita {
+    background-image: url('../assets/images/dipsy.png');
+}
+
+.status-tranquila {
+    background-image: url('../assets/images/tinky-winky.png');
+}
+
+.status-importante {
+    background-image: url('../assets/images/laa-laa.png'); 
+}
+
+.status-urgente {
+    background-image: url('../assets/images/po.png'); 
+}
+
+#teletubbies-sol {
+    position: absolute;
+    right: 7rem;
+    top: 2.5rem;
+}

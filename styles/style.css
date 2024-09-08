@@ -1,21 +1,132 @@
+/* reset css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style */
+
 body {
     /* background-image: url('../assets/images/background.png'); */
-    background-image: url('../assets/images/background-2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: linear-gradient(to bottom, transparent 0%, #7f7f7ff2 100%), url('/assets/images/background-2.png');
 }
 
 main {
-    margin: 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: #ffffff36;
+    margin: 0 40px;
+    padding: 10px;
+    gap: 10px;
 }
+
+.adiciona-procura{
+    display: flex;
+    gap: 50px;
+}
+
+input, select, button{
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible{
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+select{
+    height: 30px;
+}
+
 
 ul {
     list-style: none;
+}
+
+#listaTarefas li{
+    display: flex;
+    align-items: center;
+}
+
+li span:nth-child(2){
+    width: 265px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+#btn-addTarefa{
+    background-color: #529d57;
+    color: #fff;
+    margin-left: 30px;
+}
+
+#btn-buscarTarefa{
+    background-color:	#999999;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.editTask{
+    background-color:#5bc0de;
+    color: #fff;
+}
+
+.removeTask{
+    background-color:#d9534f;
+    color: #fff;
+    margin-left: 10px;
 }
 
 .status-feita, .status-tranquila, .status-importante, .status-urgente {
@@ -43,8 +154,32 @@ ul {
     background-image: url('../assets/images/po.png'); 
 }
 
-#teletubbies-sol {
-    position: absolute;
-    right: 7rem;
-    top: 2.5rem;
+header {
+    padding: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lista-legenda{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.legenda{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legenda img{
+    width: 50px;
+}
+
+.legenda span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
 }

@@ -18,8 +18,13 @@ function addTarefa() {
         statusTarefa: statusSelect.value        
     }
 
-    tarefas.push(novaTarefa);
-    exibirTarefas();
+    // validação 
+    if(!tarefaInput.value  || !statusSelect.value ){
+        alert("Não é possível inserir uma tarefa vazia")
+    } else {
+        tarefas.push(novaTarefa);
+        exibirTarefas();
+    }
 
     tarefaInput.value = '';
     statusSelect.value = '';
@@ -35,6 +40,7 @@ function exibirTarefas(){
         
         //cria a carinha do teletubbie de acordo com o status
         const statusDiv = document.createElement('span');
+        statusDiv.className = `status-${tarefa.statusTarefa}`
         /* statusDiv.className = `status-${tarefas.indexOf(tarefa)}` */
         statusDiv.id = `status-tarefa-${tarefas.indexOf(tarefa)}`
         item.appendChild(statusDiv);
@@ -48,10 +54,12 @@ function exibirTarefas(){
         
         const btnEditar = document.createElement('button');
         btnEditar.textContent = "Editar";
+        btnEditar.className = "editTask"
         btnEditar.addEventListener('click', () => editarTarefa(tarefa));
         item.appendChild(btnEditar)
 
         const btnRemover = document.createElement('button');
+        btnRemover.className = "removeTask"
         btnRemover.textContent = "Remover";
         btnRemover.addEventListener('click', () => removerTarefa(tarefa));
         item.appendChild(btnRemover)
@@ -59,6 +67,13 @@ function exibirTarefas(){
         listaTarefas.appendChild(item);
 
     });
+
+    if(listaTarefas.innerHTML === ''){
+        document.getElementById('searchTask').style.display = 'none'
+    } else {
+        document.getElementById('searchTask').style.display = 'block'
+    }
+    
 }
 
 // Função para editar uma Tarefa

@@ -95,6 +95,10 @@ ul {
     list-style: none;
 }
 
+#listaTarefas{
+    padding: 20px;
+}
+
 #listaTarefas li{
     display: flex;
     align-items: center;
@@ -109,7 +113,7 @@ li span:nth-child(2){
 #btn-addTarefa{
     background-color: #529d57;
     color: #fff;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 #btn-buscarTarefa{

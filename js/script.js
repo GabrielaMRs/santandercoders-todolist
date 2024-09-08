@@ -91,8 +91,45 @@ function removerTarefa(id){
     exibirTarefas();
 }
 
-function obterTarefa(id){
-    
+// Função para buscar tarefas
+function obterTarefa() {
+    const nomeBusca = document.getElementById('buscarTarefa').value.trim().toLowerCase();
+    const tarefasBuscadas = tarefas.filter(tarefa => tarefa.nomeTarefa.toLowerCase().includes(nomeBusca));
+
+    const listaTarefas = document.getElementById('listaTarefas');
+    listaTarefas.innerHTML = '';
+
+    tarefasBuscadas.forEach(tarefa => {
+        const item = document.createElement('li');
+        
+        //cria a carinha do teletubbie de acordo com o status
+        const statusDiv = document.createElement('span');
+        statusDiv.className = `status-${tarefa.statusTarefa}`
+        /* statusDiv.className = `status-${tarefas.indexOf(tarefa)}` */
+        statusDiv.id = `status-tarefa-${tarefas.indexOf(tarefa)}`
+        item.appendChild(statusDiv);
+        
+        //criar o nome da tarefa
+        const tarefaNome = document.createElement('span');
+        tarefaNome.textContent = `${tarefa.nomeTarefa}`;
+        /* tarefaNome.className = `nome-tarefa-${tarefas.indexOf(tarefa)}` */
+        tarefaNome.id = `nome-tarefa-${tarefas.indexOf(tarefa)}`
+        item.appendChild(tarefaNome);
+        
+        const btnEditar = document.createElement('button');
+        btnEditar.textContent = "Editar";
+        btnEditar.className = "editTask"
+        btnEditar.addEventListener('click', () => editarTarefa(tarefa));
+        item.appendChild(btnEditar)
+
+        const btnRemover = document.createElement('button');
+        btnRemover.className = "removeTask"
+        btnRemover.textContent = "Remover";
+        btnRemover.addEventListener('click', () => removerTarefa(tarefa));
+        item.appendChild(btnRemover)
+
+        listaTarefas.appendChild(item);
+    });
 }
 
 exibirTarefas();

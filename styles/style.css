@@ -25,8 +25,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-	line-height: 1;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -52,20 +60,31 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom, transparent 0%, #7f7f7ff2 100%), url('/assets/images/background-2.png');
+    /* background-image: linear-gradient(to bottom, transparent 0%, #7f7f7ff2 100%), url('/assets/images/background-2.png'); */
+    background-image: url('/assets/images/background-2.png');
+}
+#title {
+    display: block;
+    margin: -100px auto 20px auto;
+    width: 25rem; 
+    height: auto;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    flex: 1;
     background-color: #ffffff36;
-    margin: 0 40px;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     gap: 10px;
 }
 
 .adiciona-procura{
     display: flex;
+    flex-direction: row;
     gap: 50px;
 }
 
@@ -164,6 +183,16 @@ header {
     justify-content: flex-end;
 }
 
+footer {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+}
+
 .lista-legenda{
     display: flex;
     justify-content: space-between;
@@ -172,9 +201,10 @@ header {
 
 .legenda{
     display: flex;
-    align-content: center;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .legenda img{

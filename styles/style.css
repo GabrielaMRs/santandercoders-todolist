@@ -163,18 +163,26 @@ li span:nth-child(2){
 
 .status-feita {
     background-image: url('../assets/images/dipsy.png');
+    border: 3px solid #6fd16f;
+    border-radius: 50%;
 }
 
 .status-tranquila {
     background-image: url('../assets/images/tinky-winky.png');
+    border: 3px solid #5b0b63;
+    border-radius: 50%;
 }
 
 .status-importante {
-    background-image: url('../assets/images/laa-laa.png'); 
+    background-image: url('../assets/images/laa-laa.png');
+    border: 3px solid #fcff3b;
+    border-radius: 50%; 
 }
 
 .status-urgente {
-    background-image: url('../assets/images/po.png'); 
+    background-image: url('../assets/images/po.png');
+    border: 3px solid #eb2222;
+    border-radius: 50%; 
 }
 
 header {

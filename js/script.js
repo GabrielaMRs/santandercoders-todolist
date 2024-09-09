@@ -77,10 +77,12 @@ function exibirTarefas(){
 }
 
 // Função para editar uma Tarefa
-function editarTarefa(id){
-    const tarefaAtual = document.getElementById(`nome-tarefa-${tarefas.indexOf(id)}`);
-    console.log(tarefaAtual);
+function editarTarefa(tarefa){
+    document.getElementById('tarefa').value = tarefa.nomeTarefa;
+    document.getElementById('statusTarefa').value = tarefa.statusTarefa;
 
+    tarefas.splice(tarefas.indexOf(tarefa), 1);
+    
     exibirTarefas();
 }
 

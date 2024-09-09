@@ -10,8 +10,11 @@
     <header>
         <img src="./assets/images/teletubbies-sol.gif" alt="Sol do Teletubbies" id="teletubbies-sol">
     </header>
+    <div>
+        <img src="assets/images/T.png" alt="" id="title">
+    </div>
     <main class="main-list">
-
+        
         <div class="adiciona-procura">
             <form action=""> 
                 <input type="text" id="tarefa" placeholder="Nova Tarefa..." required>
@@ -24,12 +27,11 @@
                     <option value="urgente">Urgente</option>                
                 </select>
     
-                <button type="submit" id="btn-addTarefa">Adicionar Tarefa</button>            
+                <button type="button" id="btn-addTarefa">Adicionar Tarefa</button>            
             </form>
             
             <div id="searchTask">
-                <input id="buscarTarefa" placeholder="Digite o nome da tarefa">
-                <button id="btn-buscarTarefa" onclick="obterTarefa()">Procurar</button>
+                <input id="buscarTarefa" placeholder="Filtrar tarefa pelo nome..." oninput="obterTarefa()">                
             </div>
 
             
@@ -40,15 +42,32 @@
                 <ul id="listaTarefas"></ul>
             </div>
     
-            <div class="legenda">
+            <!-- <div class="legenda">
                 <h2>Legenda:</h2>
                 <span><img src="/assets/images/dipsy.png" alt="">Feita</span>
                 <span><img src="/assets/images/laa-laa.png" alt="">Tranquila</span>
                 <span><img src="/assets/images/po.png" alt="">Importante</span>
                 <span><img src="/assets/images/tinky-winky.png" alt="">Urgente</span>
-            </div>
+            </div> -->
         </div>
     </main>
+    <footer>
+        <div class="legenda">
+            <h2>Legenda:</h2>
+            <span><img src="/assets/images/dipsy.png" alt="">Feita</span>
+            <span><img src="/assets/images/laa-laa.png" alt="">Tranquila</span>
+            <span><img src="/assets/images/po.png" alt="">Importante</span>
+            <span><img src="/assets/images/tinky-winky.png" alt="">Urgente</span>
+            <audio id="meuAudio">
+                <source src="assets/audio/trilha-sonora.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+        <div>
+            <button onclick="document.getElementById('meuAudio').play()">▶️</button>
+            <button onclick="document.getElementById('meuAudio').pause()">⏸️</button>
+        </div>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>

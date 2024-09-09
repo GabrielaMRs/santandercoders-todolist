@@ -25,8 +25,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-	line-height: 1;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -52,12 +60,20 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom, transparent 0%, #7f7f7ff2 100%), url('/assets/images/background-2.png');
+    /* background-image: linear-gradient(to bottom, transparent 0%, #7f7f7ff2 100%), url('/assets/images/background-2.png'); */
+    background-image: url('/assets/images/background-2.png');
+}
+#title {
+    display: block;
+    margin: -100px auto auto;
+    width: 25rem; 
+    height: auto;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    flex: 1;
     background-color: #ffffff36;
     margin: 0 40px;
     padding: 10px;
@@ -67,6 +83,7 @@ main {
 
 .adiciona-procura{
     display: flex;
+    flex-direction: row;
     gap: 50px;
 }
 
@@ -145,24 +162,63 @@ li span:nth-child(2){
 
 .status-feita {
     background-image: url('../assets/images/dipsy.png');
+    border: 3px solid #6fd16f;
+    border-radius: 50%;
 }
 
 .status-tranquila {
     background-image: url('../assets/images/tinky-winky.png');
+    border: 3px solid #5b0b63;
+    border-radius: 50%;
 }
 
 .status-importante {
-    background-image: url('../assets/images/laa-laa.png'); 
+    background-image: url('../assets/images/laa-laa.png');
+    border: 3px solid #fcff3b;
+    border-radius: 50%; 
 }
 
 .status-urgente {
-    background-image: url('../assets/images/po.png'); 
+    background-image: url('../assets/images/po.png');
+    border: 3px solid #eb2222;
+    border-radius: 50%; 
 }
 
 header {
     padding: 40px;
     display: flex;
     justify-content: flex-end;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.legenda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.5em;     
 }
 
 .lista-legenda{
@@ -173,9 +229,10 @@ header {
 
 .legenda{
     display: flex;
-    align-content: center;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .legenda img{

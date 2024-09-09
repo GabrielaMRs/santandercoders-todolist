@@ -65,7 +65,7 @@ body {
 }
 #title {
     display: block;
-    margin: -100px auto 20px auto;
+    margin: -100px auto auto;
     width: 25rem; 
     height: auto;
 }
@@ -184,13 +184,34 @@ header {
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.5); 
     padding: 20px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.legenda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.5em;     
 }
 
 .lista-legenda{

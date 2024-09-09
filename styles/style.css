@@ -61,6 +61,7 @@ main {
     background-color: #ffffff36;
     margin: 0 40px;
     padding: 10px;
+    border-radius: 1.2rem;
     gap: 10px;
 }
 

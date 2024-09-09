@@ -121,6 +121,7 @@ ul {
 #listaTarefas li{
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 li span:nth-child(2){

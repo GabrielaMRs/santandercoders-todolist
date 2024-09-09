@@ -74,11 +74,12 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #ffffff36;
+    background-color: #ffffff9a;
     margin: 0 40px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 1.2rem;
     gap: 10px;
+    margin-bottom: 40px;
 }
 
 .adiciona-procura{
@@ -125,7 +126,7 @@ ul {
 li span:nth-child(2){
     width: 265px;
     margin-left: 20px;
-    color: #fff;
+    color: #010101;
 }
 
 #btn-addTarefa{
